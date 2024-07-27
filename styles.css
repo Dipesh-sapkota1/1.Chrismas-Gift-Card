@@ -137,6 +137,7 @@ body{
 @media(min-width: 900px){
   .card{
     max-width: 450px;
+    height: 600px;
   }
   .card-content h1{
     font-size: 2rem;
