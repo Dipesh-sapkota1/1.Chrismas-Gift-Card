@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Festive&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+:root{
+    --clr-accent: #dab54c;
+    --clr-accent-400: #ebc86a;
+    --clr-font: #242e4c;
+    --clr-font-700: #141a2b;
+
+    --ff-accent: "Festive", cursive;
+    --ff-lead: "Cinzel Decorative", serif;
+    --ff-regular: "Mulish", sans-serif;
+
+    --fw-600: 600;
+    --fw-700: 700;
+
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+  i{color: #ffffff;}
+body{
+  font-family: var(--ff-regular);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  background: rgb(122,29,18);
+  background: linear-gradient(114deg, rgba(122,29,18,1) 0%, rgba(145,35,22,1) 32%, rgba(169,45,30,1) 66%, rgba(201,56,39,1) 100%);
+  overflow: hidden;
+}
+.btn{
+  font-family: var(--ff-lead);
+  font-weight: var(--fw-600);
+  border:none;
+  color: #fff;
+  background-color: var(--clr-font);
+  border-radius: 5px;
+  margin-bottom: 1.3rem;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn:hover{
+  background-color: var(--clr-font-700);
+}
+.card{
+  background-color: #0d0b10;
+  text-align: center;
+  max-width: 375px;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header{
+  background: url('./Images/5323430_2776323.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.card-content{
+  background: #21420d;
+  padding-inline: 0.5rem;
+}
+.card-content h1{
+  font-family: var(--ff-lead);
+  color: var(--clr-accent);
+}
+.card-content .lead{
+  color: #fff;
+  margin: 0.5rem 0 0.2rem 0;
+
+}
+.card-content h1 {
+  font-size: 1.6rem;
+}
+.card-content .lead {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+.card-content .offer-text{
+  color: var(--clr-accent-400);
+  margin: 1.25rem 0;
+}
+.spacer{
+  background-image: url('./Images/wave-haikei.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100px;
+}
+
+.snowflakes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.snowflake {
+    position: absolute;
+    top: -100px;
+    opacity: 0.8;
+    pointer-events: none;
+    animation: fall linear infinite;
+}
+@media(min-width: 900px){
+  .card{
+    max-width: 450px;
+  }
+  .card-content h1{
+    font-size: 2rem;
+  }
+  .card-content{
+    padding: 10px 20px;
+  }
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+    }
+}
